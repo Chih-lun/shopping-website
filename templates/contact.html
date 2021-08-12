@@ -1,0 +1,30 @@
+{% include "header.html" %}
+
+      <div class="brand_color">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Contact Us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- contact -->
+    <div class="contact" style="padding-bottom:20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% import "bootstrap/wtf.html" as wtf %}
+                    {{ wtf.quick_form(form, novalidate=True) }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end contact -->
+
+{% include "footer.html" %}

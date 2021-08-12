@@ -1,0 +1,25 @@
+{% include "header.html" %}
+<div class="container mt-5 mb-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-8">
+            <div class="p-2">
+                <h4>Order List</h4>
+            </div>
+
+            {% for time in times %}
+            <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
+                <div class="mr-1">
+                    <h5>{{ time }}</h5>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <a href="{{ url_for('detail',time=time) }}">
+                        <button type="button" class="btn btn-warning">Detail</button>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% include "footer.html" %}
